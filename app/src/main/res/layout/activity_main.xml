@@ -5,15 +5,113 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green_light"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/app_icon_image"
+        android:layout_width="251dp"
+        android:layout_height="293dp"
+        android:layout_marginTop="172dp"
+        android:contentDescription="@string/app_icon_description"
+        android:src="@drawable/bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/green_dark"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_icon_image" />
+
+    <TextView
+        android:id="@+id/author_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/author_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name_label"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/app_version_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/app_version"
+        android:textAlignment="center"
+        android:textColor="@color/green_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/author_label"
+        app:layout_constraintEnd_toEndOf="@+id/app_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/app_name_label" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@drawable/button_background_color"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/main_menu_view_start_button_text"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/help_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/help_button"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@drawable/button_background_color"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/main_menu_view_help_button_text"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/issues_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/issues_button"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@drawable/button_background_color"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/main_menu_view_issues_button_text"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
