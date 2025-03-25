@@ -10,14 +10,16 @@
 
     <ImageView
         android:id="@+id/app_icon_image"
-        android:layout_width="251dp"
-        android:layout_height="293dp"
-        android:layout_marginTop="172dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:contentDescription="@string/app_icon_description"
         android:src="@drawable/bg"
+        android:clickable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/app_name_label"
@@ -27,9 +29,10 @@
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="@color/green_dark"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="38sp"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="@+id/app_icon_image"
+        app:layout_constraintStart_toStartOf="@+id/app_icon_image"
         app:layout_constraintTop_toBottomOf="@+id/app_icon_image" />
 
     <TextView
@@ -40,9 +43,10 @@
         android:text="@string/author_name"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="26sp"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="@+id/app_name_label"
+        app:layout_constraintStart_toStartOf="@+id/app_name_label"
         app:layout_constraintTop_toBottomOf="@+id/app_name_label"
         tools:ignore="TextContrastCheck" />
 
@@ -53,65 +57,66 @@
         android:fontFamily="@font/comfortaa"
         android:text="@string/app_version"
         android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textSize="18sp"
+        android:textColor="@color/green_dark_medium"
+        android:textSize="20sp"
+        android:clickable="false"
         app:layout_constraintBottom_toBottomOf="@+id/author_label"
         app:layout_constraintEnd_toEndOf="@+id/app_name_label"
         app:layout_constraintTop_toBottomOf="@+id/app_name_label" />
 
     <Button
         android:id="@+id/start_button"
-        android:layout_width="320dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@drawable/button_background_color"
         android:fontFamily="@font/comfortaa"
         android:gravity="center"
         android:includeFontPadding="false"
         android:text="@string/main_menu_view_start_button_text"
-        android:textSize="18sp"
-        android:textColor="@color/white"
+        android:textColor="@color/green_light_white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/help_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize" />
 
     <Button
         android:id="@+id/help_button"
-        android:layout_width="320dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@drawable/button_background_color"
         android:fontFamily="@font/comfortaa"
         android:gravity="center"
         android:includeFontPadding="false"
         android:text="@string/main_menu_view_help_button_text"
-        android:textSize="18sp"
-        android:textColor="@color/white"
+        android:textColor="@color/green_light_white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/issues_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize" />
 
     <Button
         android:id="@+id/issues_button"
-        android:layout_width="320dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@drawable/button_background_color"
         android:fontFamily="@font/comfortaa"
         android:gravity="center"
         android:includeFontPadding="false"
         android:text="@string/main_menu_view_issues_button_text"
-        android:textSize="18sp"
-        android:textColor="@color/white"
+        android:textColor="@color/green_light_white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
