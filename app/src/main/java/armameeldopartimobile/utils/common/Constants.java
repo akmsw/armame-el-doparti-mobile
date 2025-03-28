@@ -1,6 +1,7 @@
 package armameeldopartimobile.utils.common;
 
 import armameeldopartimobile.models.enums.Error;
+import armameeldopartimobile.models.enums.Position;
 
 import java.util.Map;
 
@@ -30,6 +31,22 @@ public class Constants {
 
     public static final String MSG_ERROR_NO_OPTIONAL_CONTENT = "No available content to retrieve in Optional object.";
     public static final String PLAYER_NO_NAME_ASSIGNED = "";
+    public static final String POSITION_CENTRAL_DEFENDERS = "DEFENSORES CENTRALES";
+    public static final String POSITION_FORWARDS = "DELANTEROS";
+    public static final String POSITION_GOALKEEPERS = "ARQUEROS";
+    public static final String POSITION_LATERAL_DEFENDERS = "DEFENSORES LATERALES";
+    public static final String POSITION_MIDFIELDERS = "MEDIOCAMPISTAS";
+
+    /**
+     * Positions to show in the names input view spinner.
+     */
+    public static final Map<Position, String> MAP_POSITIONS = Map.of(
+        Position.CENTRAL_DEFENDER, POSITION_CENTRAL_DEFENDERS,
+        Position.LATERAL_DEFENDER, POSITION_LATERAL_DEFENDERS,
+        Position.MIDFIELDER, POSITION_MIDFIELDERS,
+        Position.FORWARD, POSITION_FORWARDS,
+        Position.GOALKEEPER, POSITION_GOALKEEPERS
+    );
 
     /**
      * Map of errors and their corresponding exit code.

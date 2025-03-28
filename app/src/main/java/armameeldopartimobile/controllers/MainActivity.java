@@ -17,6 +17,8 @@ import armameeldopartimobile.utils.common.Constants;
 
 import com.example.armameeldopartimobile.R;
 
+import java.util.EnumMap;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -45,19 +47,40 @@ public class MainActivity extends AppCompatActivity {
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+
             return insets;
         });
 
-        initializePlayersSetsMap();
+        initializeCommonMaps();
     }
 
     // ---------- Private methods ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /**
+     * Initializes common maps.
+     */
+    private void initializeCommonMaps() {
+        CommonFields.setPlayerLimitPerPosition(new EnumMap<>(Position.class));
+        CommonFields.setPlayersSets(new TreeMap<>());
+
+        setPlayersDistribution();
+        populatePlayersSets();
+    }
+
+    private void setPlayersDistribution() {
+        CommonFields.getPlayerLimitPerPosition().put(Position.CENTRAL_DEFENDER, 1);
+        CommonFields.getPlayerLimitPerPosition().put(Position.LATERAL_DEFENDER, 2);
+        CommonFields.getPlayerLimitPerPosition().put(Position.MIDFIELDER, 2);
+        CommonFields.getPlayerLimitPerPosition().put(Position.FORWARD, 1);
+        CommonFields.getPlayerLimitPerPosition().put(Position.GOALKEEPER, 1);
+    }
+
+    /**
      * Populates the players sets with empty players.
      */
-    private static void initializePlayersSetsMap() {
+    private void populatePlayersSets() {
         for (Position position : Position.values()) {
             CommonFields.getPlayersSets()
                         .put(position, IntStream.range(0, CommonFields.getPlayerLimitPerPosition().get(position) * 2)
