@@ -1,5 +1,14 @@
 package armameeldopartimobile.utils.common;
 
+/**
+ * Common-use constants class.
+ *
+ * @author Bonino, Francisco Ignacio.
+ *
+ * @version 1.0.0
+ *
+ * @since 1.0.0
+ */
 public class Constants {
 
     // ---------- Public constants --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
