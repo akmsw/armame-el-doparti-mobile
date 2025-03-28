@@ -6,4 +6,5 @@
     <string name="main_menu_view_start_button_text">Comenzar</string>
     <string name="main_menu_view_help_button_text">Ayuda</string>
     <string name="main_menu_view_issues_button_text">Reportes y sugerencias</string>
+    <string name="names_input_activity_title">Ingreso de jugadores</string>
 </resources>
