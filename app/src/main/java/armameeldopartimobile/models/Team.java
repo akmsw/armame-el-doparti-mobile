@@ -50,9 +50,9 @@ public class Team {
      */
     public void clear() {
         teamPlayers.values()
-                .stream()
-                .flatMap(List::stream)
-                .forEach(player -> player.setTeamNumber(Constants.PLAYER_NO_TEAM_ASSIGNED));
+                   .stream()
+                   .flatMap(List::stream)
+                   .forEach(player -> player.setTeamNumber(Constants.PLAYER_NO_TEAM_ASSIGNED));
 
         teamPlayers.values()
                 .forEach(List::clear);
@@ -72,9 +72,9 @@ public class Team {
      */
     public int getPlayersCount() {
         return teamPlayers.values()
-                .stream()
-                .mapToInt(List::size)
-                .sum();
+                          .stream()
+                          .mapToInt(List::size)
+                          .sum();
     }
 
     /**
@@ -82,10 +82,10 @@ public class Team {
      */
     public int getTeamSkill() {
         return teamPlayers.values()
-                .stream()
-                .flatMap(List::stream)
-                .mapToInt(Player::getSkillPoints)
-                .sum();
+                          .stream()
+                          .flatMap(List::stream)
+                          .mapToInt(Player::getSkillPoints)
+                          .sum();
     }
 
     /**
@@ -93,9 +93,9 @@ public class Team {
      */
     public Map<Position, Integer> getPlayersCountPerPosition() {
         return teamPlayers.values()
-                .stream()
-                .flatMap(List::stream)
-                .collect(Collectors.toMap(Player::getPosition, player -> 1, Integer::sum, () -> new EnumMap<>(Position.class)));
+                          .stream()
+                          .flatMap(List::stream)
+                          .collect(Collectors.toMap(Player::getPosition, player -> 1, Integer::sum, () -> new EnumMap<>(Position.class)));
     }
 
     // ---------- Getters -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
