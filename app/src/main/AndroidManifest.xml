@@ -13,10 +13,10 @@
         android:theme="@style/Theme.ArmameElDopartiMobile"
         tools:targetApi="31">
         <activity
-            android:name=".NamesInputActivity"
+            android:name="armameeldopartimobile.NamesInputActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="armameeldopartimobile.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

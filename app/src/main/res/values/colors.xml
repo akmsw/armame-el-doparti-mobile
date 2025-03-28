@@ -7,15 +7,8 @@
     <color name="green_dark">#29474a</color>
     <color name="green_dark_medium">#4b6560</color>
     <color name="green_medium">#6d8276</color>
-    <color name="green_medium_light">#8fa08c</color>
     <color name="green_light">#b0bda2</color>
     <color name="green_light_white">#d8ded1</color>
 
     <!--  Anchorages color palette  -->
-    <color name="anchorage_1">#e5af8d</color>
-    <color name="anchorage_2">#74b1d1</color>
-    <color name="anchorage_3">#ffee99</color>
-    <color name="anchorage_4">#85d689</color>
-    <color name="anchorage_5">#a995c9</color>
-    <color name="anchorage_6">#f27c7c</color>
 </resources>
