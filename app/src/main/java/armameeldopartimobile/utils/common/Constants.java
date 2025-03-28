@@ -29,6 +29,7 @@ public class Constants {
     public static final int PLAYER_NO_TEAM_ASSIGNED = 0;
 
     public static final String MSG_ERROR_NO_OPTIONAL_CONTENT = "No available content to retrieve in Optional object.";
+    public static final String PLAYER_NO_NAME_ASSIGNED = "";
 
     /**
      * Map of errors and their corresponding exit code.
