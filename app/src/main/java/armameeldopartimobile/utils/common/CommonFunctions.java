@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
 import java.util.stream.Collectors;
 
 import armameeldopartimobile.models.Player;
@@ -82,12 +83,12 @@ public final class CommonFunctions {
      */
     public static List<List<Player>> getAnchorages() {
         return new ArrayList<>(CommonFields.getPlayersSets()
-                .values()
-                .stream()
-                .flatMap(List::stream)
-                .filter(Player::isAnchored)
-                .collect(Collectors.groupingBy(Player::getAnchorageNumber))
-                .values());
+                                           .values()
+                                           .stream()
+                                           .flatMap(List::stream)
+                                           .filter(Player::isAnchored)
+                                           .collect(Collectors.groupingBy(Player::getAnchorageNumber))
+                                           .values());
     }
 
     /**
