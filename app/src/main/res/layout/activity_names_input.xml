@@ -41,19 +41,19 @@
         android:textAlignment="center"
         android:textColor="@color/green_dark"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="@+id/app_icon_image"
         app:layout_constraintStart_toEndOf="@+id/app_icon_image"
+        app:layout_constraintBottom_toBottomOf="@+id/app_icon_image"
         app:layout_constraintTop_toTopOf="@+id/app_icon_image" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
+        android:layout_marginTop="15dp"
         android:background="@color/green_medium"
         android:clickable="false"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_title" />
 
     <TextView
@@ -67,8 +67,8 @@
         android:textAlignment="center"
         android:textColor="@color/green_dark_medium"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <EditText
@@ -76,21 +76,21 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_edit_text"
-        android:fontFamily="@font/comfortaa"
         android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
         android:includeFontPadding="false"
         android:inputType="text"
         android:maxLength="12"
+        android:fontFamily="@font/comfortaa"
         android:textAlignment="center"
         android:textColor="@color/green_dark"
         android:textColorHint="@color/green_light"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/text_view_cd"
         tools:ignore="Autofill" />
 
@@ -99,22 +99,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/rounded_edit_text"
-        android:fontFamily="@font/comfortaa"
         android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
         android:includeFontPadding="false"
         android:inputType="text"
         android:maxLength="12"
+        android:fontFamily="@font/comfortaa"
         android:textAlignment="center"
         android:textColor="@color/green_dark"
         android:textColorHint="@color/green_light"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_cd_1"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_cd_1"
         tools:ignore="Autofill" />
 
     <TextView
