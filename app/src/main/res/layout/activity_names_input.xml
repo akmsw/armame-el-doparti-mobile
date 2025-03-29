@@ -30,7 +30,7 @@
         android:fontFamily="@font/comfortaa"
         android:text="@string/names_input_activity_title"
         android:textAlignment="center"
-        android:textColor="@color/green_dark_medium"
+        android:textColor="@color/green_dark"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="@+id/app_icon_image"
         app:layout_constraintStart_toEndOf="@+id/app_icon_image"
@@ -47,15 +47,75 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_title" />
 
-    <Spinner
-        android:id="@+id/positions_spinner"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+    <TextView
+        android:id="@+id/text_view_cd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/names_input_activity_cd_label"
+        android:textAlignment="center"
+        android:textColor="@color/green_dark_medium"
+        android:textSize="22sp"
+        android:clickable="false"
+        android:fontFamily="@font/comfortaa"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <EditText
+        android:id="@+id/edit_text_cd_1"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa"
+        android:inputType="text"
+        android:textColor="@color/green_dark"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_edit_text"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLength="12"
+        android:hint="@string/names_input_activity_edit_text_hint"
+        android:textColorHint="@color/green_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_cd"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/edit_text_cd_2"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/comfortaa"
+        android:inputType="text"
+        android:textColor="@color/green_dark"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_edit_text"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLength="12"
+        android:hint="@string/names_input_activity_edit_text_hint"
+        android:textColorHint="@color/green_light"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_cd_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_cd_1"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/text_view_ld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:fontFamily="@font/comfortaa"
+        android:layout_marginTop="10dp"
+        android:text="@string/names_input_activity_ld_label"
+        android:textAlignment="center"
+        android:textColor="@color/green_dark_medium"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_cd_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

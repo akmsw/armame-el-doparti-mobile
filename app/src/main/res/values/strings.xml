@@ -3,8 +3,11 @@
     <string name="app_version">1.0.0</string>
     <string name="author_name">\@akmsw</string>
     <string name="app_icon_description">app logo</string>
-    <string name="main_menu_view_start_button_text">Comenzar</string>
-    <string name="main_menu_view_help_button_text">Ayuda</string>
-    <string name="main_menu_view_issues_button_text">Reportes y sugerencias</string>
-    <string name="names_input_activity_title">Ingreso de jugadores</string>
+    <string name="main_menu_activity_start_button_text">comenzar</string>
+    <string name="main_menu_activity_help_button_text">ayuda</string>
+    <string name="main_menu_activity_issues_button_text">reportes y sugerencias</string>
+    <string name="names_input_activity_title">ingreso de jugadores</string>
+    <string name="names_input_activity_cd_label">defensores centrales</string>
+    <string name="names_input_activity_ld_label">defensores laterales</string>
+    <string name="names_input_activity_edit_text_hint">nombre</string>
 </resources>
