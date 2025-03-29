@@ -9,5 +9,8 @@
     <string name="names_input_activity_title">ingreso de jugadores</string>
     <string name="names_input_activity_cd_label">defensores centrales</string>
     <string name="names_input_activity_ld_label">defensores laterales</string>
+    <string name="names_input_activity_mf_label">mediocampistas</string>
+    <string name="names_input_activity_fw_label">delanteros</string>
+    <string name="names_input_activity_gk_label">arqueros</string>
     <string name="names_input_activity_edit_text_hint">nombre</string>
 </resources>
