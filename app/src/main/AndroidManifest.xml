@@ -13,9 +13,6 @@
         android:theme="@style/Theme.ArmameElDopartiMobile"
         tools:targetApi="31">
         <activity
-            android:name=".TestActivity"
-            android:exported="false" />
-        <activity
             android:name="armameeldopartimobile.controllers.NamesInputActivity"
             android:screenOrientation="portrait"
             android:exported="false"
