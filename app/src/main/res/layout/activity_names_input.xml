@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="@+id/app_icon_image" />
 
     <View
-        android:id="@+id/divider"
+        android:id="@+id/divider_top"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:layout_marginTop="15dp"
@@ -69,7 +69,7 @@
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/divider_top" />
 
     <EditText
         android:id="@+id/edit_text_cd_1"
@@ -93,7 +93,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_cd"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/edit_text_cd_2"
@@ -455,5 +455,16 @@
         app:layout_constraintTop_toTopOf="@+id/edit_text_gk_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_gk_1"
         tools:ignore="Autofill" />
+
+    <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/green_medium"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_gk_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
