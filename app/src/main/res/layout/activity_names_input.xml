@@ -9,7 +9,6 @@
     android:background="@color/green_light"
     tools:context="armameeldopartimobile.controllers.NamesInputActivity">
 
-    <!-- Vertical guideline at 50% of screen width -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"

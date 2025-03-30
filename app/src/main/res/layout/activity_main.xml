@@ -9,32 +9,39 @@
     android:background="@color/green_light"
     tools:context="armameeldopartimobile.controllers.MainActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
     <ImageView
         android:id="@+id/app_icon_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:clickable="false"
         android:contentDescription="@string/app_icon_description"
         android:src="@drawable/bg"
-        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/app_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
         android:fontFamily="@font/comfortaa"
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="@color/green_dark"
         android:textSize="38sp"
-        android:clickable="false"
         app:layout_constraintEnd_toEndOf="@+id/app_icon_image"
         app:layout_constraintStart_toStartOf="@+id/app_icon_image"
-        app:layout_constraintTop_toBottomOf="@+id/app_icon_image" />
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
         android:id="@+id/author_label"
