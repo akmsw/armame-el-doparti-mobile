@@ -1,4 +1,4 @@
-package armameeldopartimobile.controllers;
+package armameeldopartimobile.activities;
 
 import android.os.Bundle;
 
