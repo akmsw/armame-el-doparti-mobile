@@ -2,7 +2,6 @@ package armameeldopartimobile.utils.common.mixers;
 
 import java.util.List;
 import java.util.Random;
-
 import java.util.function.Predicate;
 
 import armameeldopartimobile.models.Player;

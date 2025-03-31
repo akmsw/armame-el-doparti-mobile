@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-
 import java.util.stream.Collectors;
 
 import armameeldopartimobile.models.Player;
@@ -24,7 +23,7 @@ import armameeldopartimobile.utils.common.Constants;
  *
  * @version 1.0.0
  *
- * @since 3.0.0
+ * @since 1.0.0
  */
 public class BySkillPointsMixer extends BasicPlayersMixer {
 
