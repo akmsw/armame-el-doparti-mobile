@@ -25,10 +25,13 @@ public class Constants {
 
     // ---------- Public constants --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+    public static final int DEFAULT_PLAYERS_PER_TEAM = 7;
+    public static final int ERROR_CODE_NO_AVAILABLE_TEAM = -1;
     public static final int PLAYER_NO_ANCHORAGE_ASSIGNED = 0;
     public static final int PLAYER_NO_SKILL_POINTS_ASSIGNED = 0;
     public static final int PLAYER_NO_TEAM_ASSIGNED = 0;
 
+    public static final String MSG_ERROR_NO_AVAILABLE_TEAM = "No available team for current players configuration.";
     public static final String MSG_ERROR_NO_OPTIONAL_CONTENT = "No available content to retrieve in Optional object.";
     public static final String PLAYER_NO_NAME_ASSIGNED = "";
     public static final String POSITION_CENTRAL_DEFENDERS = "DEFENSORES CENTRALES";
