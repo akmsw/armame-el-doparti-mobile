@@ -1,6 +1,8 @@
 package armameeldopartimobile.activities;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,5 +29,7 @@ public class NamesInputActivity extends AppCompatActivity {
 
             return insets;
         });
+
+        (findViewById(R.id.back_button)).setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
     }
 }

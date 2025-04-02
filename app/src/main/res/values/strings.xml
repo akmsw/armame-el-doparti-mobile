@@ -13,4 +13,6 @@
     <string name="names_input_activity_fw_label">delanteros</string>
     <string name="names_input_activity_gk_label">arqueros</string>
     <string name="names_input_activity_edit_text_hint">nombre</string>
+    <string name="names_input_activity_continue_button">continuar</string>
+    <string name="names_input_activity_back_button">atrás</string>
 </resources>
