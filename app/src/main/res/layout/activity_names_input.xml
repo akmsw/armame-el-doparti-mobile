@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/activity_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_title" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view_cd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toTopOf="@+id/edit_text_cd_1"
         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view_ld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
         app:layout_constraintTop_toTopOf="@+id/edit_text_ld_3"
         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view_mf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -210,7 +210,7 @@
         app:layout_constraintTop_toTopOf="@+id/edit_text_mf_3"
         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view_fw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -247,7 +247,7 @@
         app:layout_constraintTop_toTopOf="@+id/edit_text_fw_1"
         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view_gk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

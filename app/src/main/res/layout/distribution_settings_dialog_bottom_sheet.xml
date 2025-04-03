@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/dialogTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/dialogMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_title" />
 
-    <CheckBox
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/anchoragesCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,15 +83,11 @@
         app:buttonTint="@color/button_dynamic_color"
         tools:ignore="VisualLintButtonSize" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/okButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        style="@style/CustomDialogButtonStyle"
+        android:layout_width="match_parent"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/comfortaa"
         android:text="@string/dialog_continue_button"
-        android:textColor="@color/green_light"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        tools:ignore="VisualLintButtonSize" />
 </LinearLayout>
