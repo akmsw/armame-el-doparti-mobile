@@ -53,31 +53,31 @@ public class RandomMixer extends BasicPlayersMixer {
             Collections.shuffle(playersAtPosition);
 
             teams.get(randomTeam1)
-                    .getTeamPlayers()
-                    .get(position)
-                    .addAll(playersAtPosition.subList(0, playersAtPosition.size() / teams.size()));
+                 .getTeamPlayers()
+                 .get(position)
+                 .addAll(playersAtPosition.subList(0, playersAtPosition.size() / teams.size()));
         }
 
         teams.get(randomTeam1)
-                .getTeamPlayers()
-                .values()
-                .stream()
-                .flatMap(List::stream)
-                .forEach(player -> player.setTeamNumber(randomTeam1 + 1));
+             .getTeamPlayers()
+             .values()
+             .stream()
+             .flatMap(List::stream)
+             .forEach(player -> player.setTeamNumber(randomTeam1 + 1));
 
         CommonFields.getPlayersSets()
-                .values()
-                .stream()
-                .flatMap(List::stream)
-                .filter(player -> player.getTeamNumber() == Constants.PLAYER_NO_TEAM_ASSIGNED)
-                .forEach(player -> {
-                    teams.get(randomTeam2)
-                            .getTeamPlayers()
-                            .get(player.getPosition())
-                            .add(player);
+                    .values()
+                    .stream()
+                    .flatMap(List::stream)
+                    .filter(player -> player.getTeamNumber() == Constants.PLAYER_NO_TEAM_ASSIGNED)
+                    .forEach(player -> {
+                        teams.get(randomTeam2)
+                             .getTeamPlayers()
+                             .get(player.getPosition())
+                             .add(player);
 
-                    player.setTeamNumber(randomTeam2 + 1);
-                });
+                        player.setTeamNumber(randomTeam2 + 1);
+                    });
 
         return teams;
     }
@@ -120,9 +120,9 @@ public class RandomMixer extends BasicPlayersMixer {
                     player.setTeamNumber(availableTeamNumber + 1);
 
                     teams.get(availableTeamNumber)
-                            .getTeamPlayers()
-                            .get(player.getPosition())
-                            .add(player);
+                         .getTeamPlayers()
+                         .get(player.getPosition())
+                         .add(player);
                 }
 
                 successfulDistribution = true;
@@ -131,25 +131,25 @@ public class RandomMixer extends BasicPlayersMixer {
 
         // Remaining (not anchored) players without an assigned team
         CommonFields.getPlayersSets()
-                .values()
-                .stream()
-                .flatMap(List::stream)
-                .filter(player -> player.getTeamNumber() == Constants.PLAYER_NO_TEAM_ASSIGNED)
-                .forEach(player -> {
-                    int availableTeamNumber = getAvailableTeam(teams, team -> playerCanBeAdded(team, player));
+                    .values()
+                    .stream()
+                    .flatMap(List::stream)
+                    .filter(player -> player.getTeamNumber() == Constants.PLAYER_NO_TEAM_ASSIGNED)
+                    .forEach(player -> {
+                        int availableTeamNumber = getAvailableTeam(teams, team -> playerCanBeAdded(team, player));
 
-                    // If there's no available team at this point, something went wrong
-                    if (availableTeamNumber == Constants.ERROR_CODE_NO_AVAILABLE_TEAM) {
-                        CommonFunctions.exitProgram(Error.ERROR_INTERNAL, new IllegalStateException(Constants.MSG_ERROR_NO_AVAILABLE_TEAM));
-                    }
+                        // If there's no available team at this point, something went wrong
+                        if (availableTeamNumber == Constants.ERROR_CODE_NO_AVAILABLE_TEAM) {
+                            CommonFunctions.exitProgram(Error.ERROR_INTERNAL, new IllegalStateException(Constants.MSG_ERROR_NO_AVAILABLE_TEAM));
+                        }
 
-                    player.setTeamNumber(availableTeamNumber + 1);
+                        player.setTeamNumber(availableTeamNumber + 1);
 
-                    teams.get(availableTeamNumber)
-                            .getTeamPlayers()
-                            .get(player.getPosition())
-                            .add(player);
-                });
+                        teams.get(availableTeamNumber)
+                             .getTeamPlayers()
+                             .get(player.getPosition())
+                             .add(player);
+                    });
 
         return teams;
     }

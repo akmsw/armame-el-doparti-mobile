@@ -67,9 +67,9 @@ public class BySkillPointsMixer extends BasicPlayersMixer {
             if (playersSet.size() == 2) {
                 for (int teamIndex = 0; teamIndex < teams.size(); teamIndex++) {
                     teams.get(teamIndex)
-                            .getTeamPlayers()
-                            .get(position)
-                            .add(playersSet.get(teamIndex));
+                         .getTeamPlayers()
+                         .get(position)
+                         .add(playersSet.get(teamIndex));
                 }
 
                 continue;
@@ -117,19 +117,19 @@ public class BySkillPointsMixer extends BasicPlayersMixer {
                 player.setTeamNumber(teams.get(availableTeamNumber).getTeamNumber());
 
                 teams.get(availableTeamNumber)
-                        .getTeamPlayers()
-                        .get(player.getPosition())
-                        .add(player);
+                     .getTeamPlayers()
+                     .get(player.getPosition())
+                     .add(player);
             }
         }
 
         List<List<Player>> remainingPlayers = new ArrayList<>(CommonFields.getPlayersSets()
-                .values()
-                .stream()
-                .flatMap(List::stream)
-                .filter(player -> player.getTeamNumber() == Constants.PLAYER_NO_TEAM_ASSIGNED)
-                .collect(Collectors.groupingBy(Player::getPosition))
-                .values());
+                                                                          .values()
+                                                                          .stream()
+                                                                          .flatMap(List::stream)
+                                                                          .filter(player -> player.getTeamNumber() == Constants.PLAYER_NO_TEAM_ASSIGNED)
+                                                                          .collect(Collectors.groupingBy(Player::getPosition))
+                                                                          .values());
 
         remainingPlayers.sort(comparingInt(List::size));
 
@@ -156,9 +156,9 @@ public class BySkillPointsMixer extends BasicPlayersMixer {
                 player.setTeamNumber(teamNumber + 1);
 
                 teams.get(teamNumber)
-                        .getTeamPlayers()
-                        .get(player.getPosition())
-                        .add(player);
+                     .getTeamPlayers()
+                     .get(player.getPosition())
+                     .add(player);
             }
         }
 
@@ -187,8 +187,8 @@ public class BySkillPointsMixer extends BasicPlayersMixer {
 
         // Subsets sorted lowest to highest
         playersSubsets.sort(comparingInt(playersSubset -> playersSubset.stream()
-                .mapToInt(Player::getSkillPoints)
-                .reduce(0, Math::addExact)));
+                                                                       .mapToInt(Player::getSkillPoints)
+                                                                       .reduce(0, Math::addExact)));
 
         for (Team team : teams) {
             for (Player player : playersSubsets.get(team.getTeamNumber() - 1)) {
@@ -196,8 +196,8 @@ public class BySkillPointsMixer extends BasicPlayersMixer {
             }
 
             team.getTeamPlayers()
-                    .get(position)
-                    .addAll(playersSubsets.get(team.getTeamNumber() - 1));
+                .get(position)
+                .addAll(playersSubsets.get(team.getTeamNumber() - 1));
         }
     }
 
