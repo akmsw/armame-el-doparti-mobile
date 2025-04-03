@@ -35,5 +35,5 @@
         android:text="@string/dialog_ok_button"
         android:textColor="@color/green_light"
         android:textSize="20sp"
-        android:textStyle="normal" />
+        android:textStyle="bold" />
 </LinearLayout>

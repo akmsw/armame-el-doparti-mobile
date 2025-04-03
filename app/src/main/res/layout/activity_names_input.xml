@@ -70,52 +70,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_cd_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/rounded_edit_text"
-        android:fontFamily="@font/comfortaa"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_cd"
         tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_cd_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_cd_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_cd_1"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_view_ld"
@@ -132,97 +109,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_cd_1" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/text_view_ld"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_ld_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_ld_1"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_ld_1"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
+        style="@style/CustomEditTextStyle"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_ld_3"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_ld_3"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_view_mf"
@@ -239,97 +172,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_ld_3" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/text_view_mf"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_mf_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_mf_1"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_mf_1"
         tools:ignore="Autofill" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_mf_3"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_mf_3"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_view_fw"
@@ -346,52 +235,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_mf_3" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_fw_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/rounded_edit_text"
-        android:fontFamily="@font/comfortaa"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_fw"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_fw_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_fw_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_fw_1"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_view_gk"
@@ -408,47 +274,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_fw_1" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_gk_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/rounded_edit_text"
-        android:fontFamily="@font/comfortaa"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_gk"
-        tools:ignore="Autofill" />
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_gk_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_edit_text"
-        android:gravity="center"
         android:hint="@string/names_input_activity_edit_text_hint"
-        android:includeFontPadding="false"
-        android:inputType="text"
-        android:maxLength="10"
-        android:fontFamily="@font/comfortaa"
-        android:textAlignment="center"
-        android:textColor="@color/green_dark"
-        android:textColorHint="@color/green_light"
-        android:textSize="28sp"
+        style="@style/CustomEditTextStyle"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_gk_1"
