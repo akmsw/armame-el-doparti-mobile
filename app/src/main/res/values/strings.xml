@@ -16,8 +16,8 @@
     <string name="names_input_activity_continue_button">continuar</string>
     <string name="names_input_activity_back_button">atrás</string>
     <string name="dialog_ok_button">ok</string>
-    <string name="dialog_error_title">error!</string>
-    <string name="dialog_warning_title">advertencia!</string>
+    <string name="dialog_error_title">error</string>
+    <string name="dialog_warning_title">advertencia</string>
     <string name="dialog_name_empty">los nombres de los jugadores no pueden estar vacíos</string>
     <string name="dialog_name_numeric_string">todos los nombres de los jugadores deben tener al menos una letra de la A a la Z</string>
     <string name="dialog_name_special_characters">los nombres de los jugadores no pueden contener caracteres especiales</string>
