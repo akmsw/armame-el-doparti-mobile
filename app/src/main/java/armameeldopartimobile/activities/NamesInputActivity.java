@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -150,6 +151,8 @@ public class NamesInputActivity extends AppCompatActivity {
 
         ((TextView) view.findViewById(R.id.dialogTitle)).setText(R.string.title_dialog_distribution_settings);
         ((TextView) view.findViewById(R.id.dialogMessage)).setText(R.string.description_dialog_distribution_settings);
+
+        ((RadioButton) view.findViewById(R.id.randomRadioButton)).setChecked(true);
 
         view.findViewById(R.id.okButton).setOnClickListener(v -> bottomSheetDialog.dismiss());
 
