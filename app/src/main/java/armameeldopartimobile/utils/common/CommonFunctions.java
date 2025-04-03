@@ -1,9 +1,18 @@
 package armameeldopartimobile.utils.common;
 
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+
+import com.example.armameeldopartimobile.R;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import armameeldopartimobile.models.Player;
@@ -14,11 +23,11 @@ import armameeldopartimobile.models.enums.Position;
 /**
  * Common-use functions class.
  *
+ * @since 1.0.0
+ *
  * @author Bonino, Francisco Ignacio.
  *
  * @version 1.0.0
- *
- * @since 3.0.0
  */
 public final class CommonFunctions {
 
@@ -43,8 +52,27 @@ public final class CommonFunctions {
     }
 
     /**
-     * Calculates the difference between the skill points of a given set of teams.
+     * Shows a basic custom dialog with the given title and message.
      *
+     * @param dialogTitle   The dialog title.
+     * @param dialogMessage The dialog message.
+     * @param context       The context for the dialog.
+     */
+    public static void showBasicBottomSheetDialog(String dialogTitle, String dialogMessage, Context context) {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(context);
+
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_bottom_sheet, null);
+
+        ((TextView) view.findViewById(R.id.dialogTitle)).setText(dialogTitle);
+        ((TextView) view.findViewById(R.id.dialogMessage)).setText(dialogMessage);
+
+        view.findViewById(R.id.okButton).setOnClickListener(v -> bottomSheetDialog.dismiss());
+
+        bottomSheetDialog.setContentView(view);
+        bottomSheetDialog.show();
+    }
+
+    /**
      * @param teams Teams to calculate the skill difference.
      *
      * @return The difference between the skill points of the given teams.
@@ -65,8 +93,24 @@ public final class CommonFunctions {
     }
 
     /**
-     * Capitalizes the first letter of the given string.
+     * @param string The string to validate.
      *
+     * @return Whether the given string contains only numbers.
+     */
+    public static boolean isNumericString(String string) {
+        return Pattern.matches(Constants.REGEX_NUMERIC_STRING, string);
+    }
+
+    /**
+     * @param string The string to validate.
+     *
+     * @return Whether the given string contains special characters.
+     */
+    public static boolean containsSpecialCharacters(String string) {
+        return Pattern.matches(Constants.REGEX_SPECIAL_CHARACTERS, string);
+    }
+
+    /**
      * @param input The string to capitalize.
      *
      * @return The given string with the first letter uppercase and the rest lowercase.
@@ -76,8 +120,6 @@ public final class CommonFunctions {
     }
 
     /**
-     * Gets a list containing the anchored players grouped by their anchorage number.
-     *
      * @return A list containing the anchored players grouped by their anchorage number.
      */
     public static List<List<Player>> getAnchorages() {
@@ -96,10 +138,10 @@ public final class CommonFunctions {
      * @param <T>      Generic optional type.
      * @param optional The optional to be checked.
      *
-     * @return The optional value if present.
+     * @return The optional value, if present.
      */
     public static <T> T retrieveOptional(Optional<T> optional) {
-        if (!optional.isPresent()) {
+        if (optional.isEmpty()) {
             exitProgram(Error.ERROR_INTERNAL, new IllegalArgumentException(Constants.MSG_ERROR_NO_OPTIONAL_CONTENT));
         }
 

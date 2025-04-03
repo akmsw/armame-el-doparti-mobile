@@ -39,6 +39,8 @@ public class Constants {
     public static final String POSITION_GOALKEEPERS = "ARQUEROS";
     public static final String POSITION_LATERAL_DEFENDERS = "DEFENSORES LATERALES";
     public static final String POSITION_MIDFIELDERS = "MEDIOCAMPISTAS";
+    public static final String REGEX_NUMERIC_STRING = "\\d+$";
+    public static final String REGEX_SPECIAL_CHARACTERS = ".*[^a-z\sA-ZÁÉÍÓÚáéíóúñÑ\\d]+.*";
 
     /**
      * Positions to show in the names input view spinner.
