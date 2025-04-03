@@ -22,6 +22,7 @@
     <string name="dialog_option_distribution_by_skill_points">por puntajes</string>
     <string name="dialog_option_enable_anchorages">anclar jugadores</string>
     <string name="title_dialog_distribution_settings">distribución</string>
+    <string name="description_dialog_distribution_settings">cómo vas a repartir los jugadores?</string>
     <string name="title_dialog_warning">advertencia</string>
     <string name="dialog_name_empty">los nombres de los jugadores no pueden estar vacíos</string>
     <string name="dialog_name_numeric_string">todos los nombres de los jugadores deben tener al menos una letra de la A a la Z</string>

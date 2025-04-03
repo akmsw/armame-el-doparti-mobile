@@ -149,7 +149,7 @@ public class NamesInputActivity extends AppCompatActivity {
         View view = LayoutInflater.from(this).inflate(R.layout.distribution_settings_dialog_bottom_sheet, null);
 
         ((TextView) view.findViewById(R.id.dialogTitle)).setText(R.string.title_dialog_distribution_settings);
-        ((TextView) view.findViewById(R.id.dialogMessage)).setText("cómo vas a repartir los jugadores?");
+        ((TextView) view.findViewById(R.id.dialogMessage)).setText(R.string.description_dialog_distribution_settings);
 
         view.findViewById(R.id.okButton).setOnClickListener(v -> bottomSheetDialog.dismiss());
 
