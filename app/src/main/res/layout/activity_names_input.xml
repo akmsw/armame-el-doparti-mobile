@@ -20,8 +20,8 @@
         android:id="@+id/app_icon_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:clickable="false"
         android:contentDescription="@string/app_icon_description"
         android:src="@drawable/bg"
@@ -40,8 +40,8 @@
         android:textAlignment="center"
         android:textColor="@color/green_dark"
         android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/app_icon_image"
         app:layout_constraintBottom_toBottomOf="@+id/app_icon_image"
+        app:layout_constraintStart_toEndOf="@+id/app_icon_image"
         app:layout_constraintTop_toTopOf="@+id/app_icon_image" />
 
     <View
@@ -51,8 +51,8 @@
         android:layout_marginTop="15dp"
         android:background="@color/green_medium"
         android:clickable="false"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_title" />
 
     <TextView
@@ -66,33 +66,31 @@
         android:textAlignment="center"
         android:textColor="@color/green_dark_medium"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_cd_1"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_cd"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_cd_2"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_cd_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_cd_1"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_cd_1"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <TextView
         android:id="@+id/text_view_ld"
@@ -111,51 +109,47 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_1"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
         style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_ld"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_2"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_ld_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_ld_1"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_ld_1"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_3"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
         style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_ld_1"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_ld_4"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        style="@style/CustomEditTextStyle"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_ld_3"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_ld_3"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_ld_3"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <TextView
         android:id="@+id/text_view_mf"
@@ -174,51 +168,47 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_1"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
         style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_mf"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_2"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_mf_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_mf_1"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_mf_1"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_3"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
         style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_mf_1"
-        tools:ignore="Autofill" />
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_mf_4"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_mf_3"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_mf_3"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_mf_3"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <TextView
         android:id="@+id/text_view_fw"
@@ -237,27 +227,25 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_fw_1"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_fw"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_fw_2"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_fw_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_fw_1"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_fw_1"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <TextView
         android:id="@+id/text_view_gk"
@@ -276,33 +264,31 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_gk_1"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_gk"
-        tools:ignore="Autofill,VisualLintTextFieldSize" />
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_gk_2"
+        style="@style/CustomEditTextStyle"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
-        android:hint="@string/names_input_activity_edit_text_hint"
-        style="@style/CustomEditTextStyle"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_gk_1"
         app:layout_constraintBottom_toBottomOf="@+id/edit_text_gk_1"
-        tools:ignore="Autofill" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_gk_1"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start_button"
         style="@style/CustomButtonStyle"
-        android:text="@string/names_input_activity_continue_button"
         android:onClick="launchNextActivity"
+        android:text="@string/names_input_activity_continue_button"
         app:layout_constraintBottom_toTopOf="@+id/back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
