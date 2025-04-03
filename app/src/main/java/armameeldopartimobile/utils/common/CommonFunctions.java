@@ -61,7 +61,7 @@ public final class CommonFunctions {
     public static void showBasicBottomSheetDialog(String dialogTitle, String dialogMessage, Context context) {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(context);
 
-        View view = LayoutInflater.from(context).inflate(R.layout.dialog_bottom_sheet, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.basic_dialog_bottom_sheet, null);
 
         ((TextView) view.findViewById(R.id.dialogTitle)).setText(dialogTitle);
         ((TextView) view.findViewById(R.id.dialogMessage)).setText(dialogMessage);

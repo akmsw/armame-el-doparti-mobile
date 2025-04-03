@@ -29,11 +29,11 @@
         android:id="@+id/okButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/comfortaa"
         android:text="@string/dialog_ok_button"
         android:textColor="@color/green_light"
-        android:textSize="20sp"
+        android:textSize="26sp"
         android:textStyle="bold" />
 </LinearLayout>

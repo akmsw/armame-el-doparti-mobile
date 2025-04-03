@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:textColor="@color/green_light_white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:textColor="@color/green_medium"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/randomRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:includeFontPadding="false"
+            android:text="@string/dialog_option_distribution_random"
+            android:textColor="@color/green_light"
+            android:textSize="20sp"
+            app:buttonTint="@color/button_dynamic_color"
+            tools:ignore="VisualLintButtonSize" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/bySkillPointsRadioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/comfortaa"
+            android:includeFontPadding="false"
+            android:text="@string/dialog_option_distribution_by_skill_points"
+            android:textColor="@color/green_light"
+            android:textSize="20sp"
+            app:buttonTint="@color/button_dynamic_color"
+            tools:ignore="VisualLintButtonSize" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/green_medium"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_title" />
+
+    <CheckBox
+        android:id="@+id/anchoragesCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_option_enable_anchorages"
+        android:textColor="@color/green_light"
+        android:textSize="20sp"
+        app:buttonTint="@color/button_dynamic_color"
+        tools:ignore="VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/dialog_continue_button"
+        android:textColor="@color/green_light"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,8 +1,10 @@
 package armameeldopartimobile.activities;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +19,7 @@ import armameeldopartimobile.utils.common.CommonFunctions;
 import armameeldopartimobile.utils.common.Constants;
 
 import com.example.armameeldopartimobile.R;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.Collection;
 import java.util.List;
@@ -89,7 +92,7 @@ public class NamesInputActivity extends AppCompatActivity {
         List<Player> players = CommonFields.getPlayersSets().values().stream().flatMap(List::stream).collect(Collectors.toList());
 
         if (players.stream().anyMatch(player -> player.getName().equalsIgnoreCase(Constants.PLAYER_NO_NAME_ASSIGNED))) {
-            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.dialog_warning_title), getResources().getString(R.string.dialog_name_empty), this);
+            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.title_dialog_warning), getResources().getString(R.string.dialog_name_empty), this);
 
             return false;
         }
@@ -119,7 +122,7 @@ public class NamesInputActivity extends AppCompatActivity {
         }
 
         if (!dialogMessage.isEmpty()) {
-            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.dialog_warning_title), dialogMessage, this);
+            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.title_dialog_warning), dialogMessage, this);
 
             return false;
         }
@@ -141,6 +144,16 @@ public class NamesInputActivity extends AppCompatActivity {
     }
 
     private void showDistributionConfigDialog() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
 
+        View view = LayoutInflater.from(this).inflate(R.layout.distribution_settings_dialog_bottom_sheet, null);
+
+        ((TextView) view.findViewById(R.id.dialogTitle)).setText(R.string.title_dialog_distribution_settings);
+        ((TextView) view.findViewById(R.id.dialogMessage)).setText("cómo vas a repartir los jugadores?");
+
+        view.findViewById(R.id.okButton).setOnClickListener(v -> bottomSheetDialog.dismiss());
+
+        bottomSheetDialog.setContentView(view);
+        bottomSheetDialog.show();
     }
 }
