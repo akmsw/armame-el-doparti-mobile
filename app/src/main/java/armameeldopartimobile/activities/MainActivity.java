@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import armameeldopartimobile.models.Player;
 import armameeldopartimobile.models.enums.Position;
 import armameeldopartimobile.utils.common.CommonFields;
+import armameeldopartimobile.utils.common.CommonFunctions;
 import armameeldopartimobile.utils.common.Constants;
 
 import com.example.armameeldopartimobile.R;
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         initializeCommonMaps();
+
+        CommonFunctions.resetDistributionSettings();
     }
 
     // ---------- Private methods ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

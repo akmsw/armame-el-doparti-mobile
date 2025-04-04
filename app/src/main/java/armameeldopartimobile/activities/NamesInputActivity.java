@@ -1,6 +1,7 @@
 package armameeldopartimobile.activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
@@ -158,6 +159,8 @@ public class NamesInputActivity extends AppCompatActivity {
         ((TextView) view.findViewById(R.id.dialogMessage)).setText(R.string.description_dialog_distribution_settings);
 
         ((RadioButton) view.findViewById(R.id.randomRadioButton)).setChecked(true);
+
+        CommonFunctions.resetDistributionSettings(); // restores default distribution setting according to the initial state of the dialog
 
         view.findViewById(R.id.randomRadioButton).setOnClickListener(v -> CommonFields.setDistribution(Distribution.MIX_RANDOM));
         view.findViewById(R.id.bySkillPointsRadioButton).setOnClickListener(v -> CommonFields.setDistribution(Distribution.MIX_BY_SKILL_POINTS));

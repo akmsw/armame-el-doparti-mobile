@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 import armameeldopartimobile.models.Player;
 import armameeldopartimobile.models.Team;
+import armameeldopartimobile.models.enums.Distribution;
 import armameeldopartimobile.models.enums.Error;
 import armameeldopartimobile.models.enums.Position;
 
@@ -70,6 +71,14 @@ public final class CommonFunctions {
 
         bottomSheetDialog.setContentView(view);
         bottomSheetDialog.show();
+    }
+
+    /**
+     * Resets the distribution settings to their default values.
+     */
+    public static void resetDistributionSettings() {
+        CommonFields.setDistribution(Distribution.MIX_RANDOM);
+        CommonFields.setAnchoragesEnabled(false);
     }
 
     /**
