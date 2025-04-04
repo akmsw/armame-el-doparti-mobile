@@ -287,7 +287,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start_button"
         style="@style/CustomButtonStyle"
-        android:onClick="launchNextActivity"
+        android:onClick="processUserInput"
         android:text="@string/names_input_activity_continue_button"
         app:layout_constraintBottom_toTopOf="@+id/back_button"
         app:layout_constraintEnd_toEndOf="parent"

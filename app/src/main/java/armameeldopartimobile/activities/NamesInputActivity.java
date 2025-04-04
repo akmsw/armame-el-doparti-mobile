@@ -3,6 +3,7 @@ package armameeldopartimobile.activities;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import armameeldopartimobile.models.Player;
+import armameeldopartimobile.models.enums.Distribution;
 import armameeldopartimobile.models.enums.Position;
 import armameeldopartimobile.utils.common.CommonFields;
 import armameeldopartimobile.utils.common.CommonFunctions;
@@ -47,14 +49,14 @@ public class NamesInputActivity extends AppCompatActivity {
         (findViewById(R.id.back_button)).setOnClickListener(view -> getOnBackPressedDispatcher().onBackPressed());
     }
 
-    public void launchNextActivity(View view) {
+    public void processUserInput(View view) {
         savePlayersNames();
 
         if (!playerNamesAreValid()) {
             return;
         }
 
-        showDistributionConfigDialog();
+        saveDistributionSettings();
     }
 
     private void savePlayersNames() {
@@ -90,7 +92,7 @@ public class NamesInputActivity extends AppCompatActivity {
      * @return Whether the player names are valid.
      */
     private boolean playerNamesAreValid() {
-        List<Player> players = CommonFields.getPlayersSets().values().stream().flatMap(List::stream).collect(Collectors.toList());
+        List<Player> players = CommonFields.getPlayersSets().values().stream().flatMap(List::stream).toList();
 
         if (players.stream().anyMatch(player -> player.getName().equalsIgnoreCase(Constants.PLAYER_NO_NAME_ASSIGNED))) {
             CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.title_dialog_warning), getResources().getString(R.string.dialog_name_empty), this);
@@ -141,10 +143,14 @@ public class NamesInputActivity extends AppCompatActivity {
                            .values()
                            .stream()
                            .flatMap(Collection::stream)
-                           .filter(player -> player.getName().equalsIgnoreCase(name)).count() > 1;
+                           .filter(player -> player.getName().equalsIgnoreCase(name))
+                           .count() > 1;
     }
 
-    private void showDistributionConfigDialog() {
+    /**
+     * Shows the dialog with the settings for the distribution of the players.
+     */
+    private void saveDistributionSettings() {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
 
         View view = LayoutInflater.from(this).inflate(R.layout.distribution_settings_dialog_bottom_sheet, null);
@@ -154,9 +160,19 @@ public class NamesInputActivity extends AppCompatActivity {
 
         ((RadioButton) view.findViewById(R.id.randomRadioButton)).setChecked(true);
 
-        view.findViewById(R.id.okButton).setOnClickListener(v -> bottomSheetDialog.dismiss());
+        view.findViewById(R.id.randomRadioButton).setOnClickListener(v -> CommonFields.setDistribution(Distribution.MIX_RANDOM));
+        view.findViewById(R.id.bySkillPointsRadioButton).setOnClickListener(v -> CommonFields.setDistribution(Distribution.MIX_BY_SKILL_POINTS));
+        view.findViewById(R.id.anchoragesCheckBox).setOnClickListener(v -> CommonFields.setAnchoragesEnabled(((CheckBox) v).isChecked()));
+        view.findViewById(R.id.okButton).setOnClickListener(v -> {
+            bottomSheetDialog.dismiss();
+            launchNextActivity();
+        });
 
         bottomSheetDialog.setContentView(view);
         bottomSheetDialog.show();
+    }
+
+    private void launchNextActivity() {
+
     }
 }
