@@ -1,7 +1,7 @@
 package armameeldopartimobile.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
@@ -95,7 +95,7 @@ public class NamesInputActivity extends AppCompatActivity {
         List<Player> players = CommonFields.getPlayersSets().values().stream().flatMap(List::stream).toList();
 
         if (players.stream().anyMatch(player -> player.getName().equalsIgnoreCase(Constants.PLAYER_NO_NAME_ASSIGNED))) {
-            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.title_dialog_warning), getResources().getString(R.string.dialog_name_empty), this);
+            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.dialog_warning_title), getResources().getString(R.string.dialog_warning_name_empty), this);
 
             return false;
         }
@@ -106,26 +106,26 @@ public class NamesInputActivity extends AppCompatActivity {
             String playerName = player.getName();
 
             if (CommonFunctions.isNumericString(playerName)) {
-                dialogMessage = getResources().getString(R.string.dialog_name_numeric_string);
+                dialogMessage = getResources().getString(R.string.dialog_warning_name_numeric_string);
 
                 break;
             }
 
             if (CommonFunctions.containsSpecialCharacters(playerName)) {
-                dialogMessage = getResources().getString(R.string.dialog_name_special_characters);
+                dialogMessage = getResources().getString(R.string.dialog_warning_name_special_characters);
 
                 break;
             }
 
             if (nameAlreadyExists(playerName)) {
-                dialogMessage = getResources().getString(R.string.dialog_name_already_exists);
+                dialogMessage = getResources().getString(R.string.dialog_warning_name_already_exists);
 
                 break;
             }
         }
 
         if (!dialogMessage.isEmpty()) {
-            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.title_dialog_warning), dialogMessage, this);
+            CommonFunctions.showBasicBottomSheetDialog(getResources().getString(R.string.dialog_warning_title), dialogMessage, this);
 
             return false;
         }
@@ -155,8 +155,8 @@ public class NamesInputActivity extends AppCompatActivity {
 
         View view = LayoutInflater.from(this).inflate(R.layout.distribution_settings_dialog_bottom_sheet, null);
 
-        ((TextView) view.findViewById(R.id.dialogTitle)).setText(R.string.title_dialog_distribution_settings);
-        ((TextView) view.findViewById(R.id.dialogMessage)).setText(R.string.description_dialog_distribution_settings);
+        ((TextView) view.findViewById(R.id.dialogTitle)).setText(R.string.dialog_distribution_title);
+        ((TextView) view.findViewById(R.id.dialogMessage)).setText(R.string.dialog_distribution_description);
 
         ((RadioButton) view.findViewById(R.id.randomRadioButton)).setChecked(true);
 
@@ -175,6 +175,6 @@ public class NamesInputActivity extends AppCompatActivity {
     }
 
     private void launchNextActivity() {
-
+        startActivity(new Intent(this, ResultsActivity.class));
     }
 }

@@ -74,7 +74,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start_button"
-        android:text="@string/main_menu_activity_start_button_text"
+        android:text="@string/activity_main_menu_button_start"
         android:onClick="launchNamesInputActivity"
         style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toTopOf="@+id/help_button"
@@ -84,7 +84,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/help_button"
-        android:text="@string/main_menu_activity_help_button_text"
+        android:text="@string/activity_main_menu_button_help"
         style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toTopOf="@+id/issues_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/issues_button"
-        android:text="@string/main_menu_activity_issues_button_text"
+        android:text="@string/activity_main_menu_button_issues"
         style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

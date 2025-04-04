@@ -13,14 +13,17 @@
         android:theme="@style/Theme.ArmameElDopartiMobile"
         tools:targetApi="31">
         <activity
+            android:name="armameeldopartimobile.activities.ResultsActivity"
+            android:exported="false" />
+        <activity
             android:name="armameeldopartimobile.activities.NamesInputActivity"
-            android:screenOrientation="portrait"
             android:exported="false"
+            android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
             android:name="armameeldopartimobile.activities.MainActivity"
-            android:screenOrientation="portrait"
             android:exported="true"
+            android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi,LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

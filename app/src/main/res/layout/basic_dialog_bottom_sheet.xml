@@ -31,6 +31,6 @@
         style="@style/CustomDialogButtonStyle"
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
-        android:text="@string/dialog_ok_button"
+        android:text="@string/dialog_button_ok"
         tools:ignore="VisualLintButtonSize" />
 </LinearLayout>
