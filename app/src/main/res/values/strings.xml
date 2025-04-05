@@ -17,6 +17,7 @@
     <string name="activity_names_input_button_back">atrás</string>
     <string name="activity_results_title">resultado</string>
     <string name="activity_results_label_team_1">equipo 1</string>
+    <string name="activity_results_label_team_2">equipo 2</string>
     <string name="dialog_button_ok">ok</string>
     <string name="dialog_button_continue">continuar</string>
     <string name="dialog_title_error">error</string>

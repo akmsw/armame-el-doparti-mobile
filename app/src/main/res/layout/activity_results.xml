@@ -110,4 +110,40 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="VisualLintButtonSize" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_team_1"
+        style="@style/CustomLabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/green_medium"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/activity_results_label_team_1"
+        android:textColor="@color/green_light_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/container_team_1"
+        app:layout_constraintTop_toTopOf="@+id/container_team_1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_team_2"
+        style="@style/CustomLabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/green_medium"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/activity_results_label_team_2"
+        android:textColor="@color/green_light_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/container_team_2"
+        app:layout_constraintTop_toTopOf="@+id/container_team_2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
