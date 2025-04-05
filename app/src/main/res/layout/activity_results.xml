@@ -9,6 +9,13 @@
     android:background="@color/green_light"
     tools:context="armameeldopartimobile.activities.NamesInputActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
     <ImageView
         android:id="@+id/app_icon_image"
         android:layout_width="50dp"
@@ -49,16 +56,50 @@
         app:layout_constraintTop_toBottomOf="@+id/activity_title" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/label_team_1"
+        android:id="@+id/container_teams"
         style="@style/CustomLabelStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
-        android:textAlignment="viewStart"
-        android:text="@string/activity_results_label_team_1"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/green_light_white"
+        app:layout_constraintBottom_toTopOf="@+id/back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/container_team_1"
+        style="@style/CustomLabelStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/green_light"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/container_teams"
+        app:layout_constraintStart_toStartOf="@+id/container_teams"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="@+id/container_teams" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/container_team_2"
+        style="@style/CustomLabelStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/green_light"
+        app:layout_constraintBottom_toBottomOf="@+id/container_teams"
+        app:layout_constraintEnd_toEndOf="@+id/container_teams"
+        app:layout_constraintStart_toStartOf="@+id/container_teams"
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/back_button"

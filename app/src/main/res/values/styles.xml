@@ -49,9 +49,7 @@
     </style>
     <style name="CustomLabelStyle">
         <item name="android:background">@drawable/custom_round_rectangle</item>
-        <item name="backgroundTint">@color/green_medium</item>
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">48dp</item>
         <item name="android:fontFamily">@font/comfortaa</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:paddingStart">8dp</item>
@@ -59,7 +57,7 @@
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
         <item name="android:textColor">@color/green_light_white</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:gravity">center</item>
         <item name="android:clickable">false</item>
     </style>
